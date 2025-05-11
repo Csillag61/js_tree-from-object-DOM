@@ -22,10 +22,12 @@ function createTree(element, data) {
   if (!Object.keys(data).length) {
     return;
   }
+
   const ul = document.createElement('ul');
 
   for (const key in data) {
     const li = document.createElement('li');
+
     li.textContent = key;
 
     createTree(li, data[key]);
